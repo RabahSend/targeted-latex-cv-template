@@ -1,0 +1,111 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[margin=2cm, top=1cm]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fontawesome5}  % Pour les icônes
+\usepackage{titlesec}     % Pour personnaliser les titres
+\usepackage{hyperref}     % Pour les liens
+\usepackage{graphicx}     % Pour les images
+\usepackage{tikz}         % Pour les éléments graphiques
+\usepackage{multicol}     % Pour les colonnes
+
+% Définition des colonnes
+\setlength{\columnsep}{1cm}
+
+% Définition des couleurs
+\definecolor{primary}{RGB}{70, 142, 175}
+\definecolor{secondary}{RGB}{130, 130, 130}
+\definecolor{accent}{RGB}{230, 230, 230}
+
+% Style des sections
+\titleformat{\section}
+{\normalsize\bfseries\color{primary}}
+{}{0em}
+{\vspace{-4pt}\titlerule[1pt]\vspace{2pt}}
+[\vspace{-8pt}]
+
+% Style pour les liens
+\hypersetup{
+    colorlinks=true,
+    urlcolor=primary
+}
+
+\begin{document}
+\pagenumbering{gobble}
+
+% En-tête
+\begin{tikzpicture}[remember picture,overlay]
+    % Bandeau bleu sur toute la largeur
+    \node[rectangle, fill=primary, minimum width=\paperwidth, minimum height=4.2cm, anchor=north west] (box) at (current page.north west) {};
+    % Logo dans un rectangle blanc en haut à gauche, ajusté pour la symétrie
+    \node[anchor=north west] at ([xshift=0.8cm,yshift=-1.0cm]box.north west) {
+        \fcolorbox{white}{white}{\includegraphics[height=1.5cm]{google.png}}
+    };
+    % Photo en haut à droite, ajustée pour la symétrie
+    \node[anchor=north east] at ([xshift=-0.8cm,yshift=-0.3cm]box.north east) {
+        \includegraphics[height=3.5cm]{photo2.jpg}
+    };
+    % Bloc central (titre, nom, infos) aligné en haut du bandeau
+    \node[anchor=north] at (box.north) {
+        \begin{minipage}{0.6\textwidth}
+        \centering
+        \vspace{1em}
+        {\huge\bfseries\color{white} TITRE DU POSTE}\\[0.7em]
+        {\LARGE\bfseries\color{white} NOM PRÉNOM}\\[0.5em]
+        {\small\color{white} \faEnvelope\ \href{mailto:email@example.com}{\textcolor{white}{email@example.com}} \quad \faMobile\ +33 1 23 45 67 89 \quad \faMapMarker\ Ville }\\[0.2em]
+        \vspace{0.5em}
+        {\small \faGithub\ \href{https://github.com/username}{\textcolor{white}{username}} \quad \faLinkedin\ \href{https://www.linkedin.com/in/username}{\textcolor{white}{NOM PRÉNOM}}}
+        \end{minipage}
+    };
+\end{tikzpicture}
+
+% Espace après le bandeau
+\vspace{2.8cm}
+
+% Colonnes principales
+\begin{multicols}{2} 
+
+    % Colonne de gauche
+    \section{FORMATION}
+    \vspace{12em}
+    
+    \section{EXPÉRIENCES}
+    \vspace{12em}
+    
+    \columnbreak
+    
+    % Colonne de droite
+    \section{COMPÉTENCES}
+    \vspace{12em}
+    
+    \section{RÉALISATIONS TECHNIQUES}
+    \vspace{12em}
+    
+    \section{BÉNÉVOLAT}
+    \vspace{12em}
+    
+    \end{multicols}
+
+\vspace{8em}
+
+% Hobbies et Références côte à côte en bas
+\begin{multicols}{2}
+\section{CENTRES D'INTÉRÊT}
+\vspace{12em}
+
+\columnbreak
+
+\section{RÉFÉRENCE}
+\vspace{12em}
+\end{multicols}
+
+\vspace{8em}
+
+\section{CERTIFICATION}
+\vspace{12em}
+
+\end{document}
