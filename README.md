@@ -37,7 +37,7 @@ J’ai créé ce CV pour pouvoir :
 
 ### ☁️ Option 2 : via [Overleaf](https://www.overleaf.com/)
 
-1. **Télécharge le repo en `.zip`** (`Code > Download ZIP`)
+1. **Télécharge le repo en `.zip`** ([À télécharger ici](https://github.com/RabahSend/targeted-latex-cv-template/releases/tag/Template))
 2. Sur Overleaf, clique sur **“New Project” > “Upload Project”**
 3. Importez l’archive `.zip` complète
 
