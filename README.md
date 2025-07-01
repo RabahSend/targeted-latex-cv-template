@@ -73,7 +73,7 @@ Je prévois de publier un script Python permettant :
 
 ## 📌 Pour aller plus loin
 
-Si tu veux une **version modifiée** du template, un **guide rapide**, ou une **démo**, envoie-moi un message.  
+Si tu veux une **version modifiée** du template, un **guide rapide**, ou une **démo**, Ouvre une “issue” sur ce repo et on regarde ça ensemble.  
 Je peux aussi t’aider à adapter le template à ton profil ou ton secteur.
 
 ---
